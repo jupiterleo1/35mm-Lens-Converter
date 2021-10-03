@@ -2,10 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 
-function Converter() {
+
+function Container() {
   return (
     <div className="box">
-      <h1 className="title">Lens Converter</h1>
+      <Heading />
+      <Form />
+    </div>
+  );
+}
+
+function Heading() {
+  return (
+    <div>
+          <h1 className="title">Lens Converter</h1>
+    </div>
+  );
+}
+
+
+function Form() {
+  return (
+    <div className="forms">
       <form>
         <label for="fname">Your Lens mm.</label>
         <br />
@@ -21,6 +39,10 @@ function Converter() {
   );
 }
 
-const converter = <Converter />;
+const container = <Container />;
 
-ReactDOM.render(converter, document.getElementById('root'));
+const form = <Form />;
+
+const heading = <Heading />;
+
+ReactDOM.render( container , document.getElementById('root'));
