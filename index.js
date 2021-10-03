@@ -44,17 +44,17 @@ function Form() {
           maxlength="5"
         />
         <br />
-        <label for="lname" className="labels">
-          35 mm equivalent name:
-        </label>
-        <br />
-        <input
-          type="number"
-          id="lname"
-          className="lname"
-          name="lname"
-          maxlength="5"
-        />
+        <div className="labels">
+          <label for="lname">35 mm equivalent name:</label>
+          <br />
+          <input
+            type="number"
+            id="lname"
+            className="lname"
+            name="lname"
+            maxlength="5"
+          />
+        </div>
         <br />
         <input type="submit" value="Submit" />
       </form>
