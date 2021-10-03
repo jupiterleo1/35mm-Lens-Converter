@@ -23,8 +23,8 @@ function Heading() {
 
 function Form() {
   return (
-    <div className="forms">
-      <form>
+    <>
+      <form className="forms">
         <input type="radio" id="m43" name="formats" />
         <label for="m43">Micro Four Thirds</label>
         <br />
@@ -36,15 +36,15 @@ function Form() {
         <br />
         <br />
         <label for="fname">Your Lens mm.</label>
-        <input type="number" id="fname" name="fname" size="6" maxlength="6" />
+        <input type="number" id="fname" name="fname" maxlength="5" />
         <br />
-        <label for="lname">35 mm equivqlent name:</label>
+        <label for="lname">35 mm equivalent name:</label>
         <br />
-        <input type="number" id="lname" name="lname" size="6" maxlength="6" />
+        <input type="number" id="lname" name="lname" maxlength="5"  />
         <br />
         <input type="submit" value="Submit" />
       </form>
-    </div>
+    </>
   );
 }
 
