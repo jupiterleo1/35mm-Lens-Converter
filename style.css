@@ -48,16 +48,14 @@ input {
 
 .labels{
   display: flex;
-  flex-wrap: nowrap;
-  width:45%;
-  flex-direction: row;
+flex-direction: row;
+border-top: .2rem solid whitesmoke;
+padding-top: 1rem;
 }
 
-.forms {
-}
 
 .fname, .lname {
-  display: flex;
   width: 5ch;
+  flex-wrap: nowrap;
+  flex-basis: ;
 }
-

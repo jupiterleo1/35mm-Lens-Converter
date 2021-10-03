@@ -33,7 +33,8 @@ function Form() {
         <label for="1 inch">1 inch. Sensor</label>
         <br />
         <br />
-        <label for="fname" className="labels">
+        <div className="labels">
+        <label for="fname">
           Your Lens mm.
         </label>
         <input
@@ -43,8 +44,8 @@ function Form() {
           name="fname"
           maxlength="5"
         />
-        <br />
-        <div className="labels">
+        
+        
           <label for="lname">35 mm equivalent name:</label>
           <br />
           <input
@@ -56,7 +57,7 @@ function Form() {
           />
         </div>
         <br />
-        <input type="submit" value="Submit" />
+        <input type="submit" className="submit-btn" value="Submit" />
       </form>
     </>
   );
