@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 
-
 function Container() {
   return (
     <div className="box">
@@ -15,11 +14,10 @@ function Container() {
 function Heading() {
   return (
     <div>
-          <h1 className="title">35mm Lens Converter</h1>
+      <h1 className="title">35mm Lens Converter</h1>
     </div>
   );
 }
-
 
 function Form() {
   return (
@@ -35,12 +33,28 @@ function Form() {
         <label for="1 inch">1 inch. Sensor</label>
         <br />
         <br />
-        <label for="fname">Your Lens mm.</label>
-        <input type="number" id="fname" name="fname" maxlength="5" />
+        <label for="fname" className="labels">
+          Your Lens mm.
+        </label>
+        <input
+          type="number"
+          id="fname"
+          className="fname"
+          name="fname"
+          maxlength="5"
+        />
         <br />
-        <label for="lname">35 mm equivalent name:</label>
+        <label for="lname" className="labels">
+          35 mm equivalent name:
+        </label>
         <br />
-        <input type="number" id="lname" name="lname" maxlength="5"  />
+        <input
+          type="number"
+          id="lname"
+          className="lname"
+          name="lname"
+          maxlength="5"
+        />
         <br />
         <input type="submit" value="Submit" />
       </form>
@@ -54,4 +68,4 @@ const form = <Form />;
 
 const heading = <Heading />;
 
-ReactDOM.render( container , document.getElementById('root'));
+ReactDOM.render(container, document.getElementById('root'));
