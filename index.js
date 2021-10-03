@@ -25,16 +25,16 @@ function Form() {
   return (
     <div className="forms">
       <form>
-        <input type="radio" id="m43" name="m43" />
+        <input type="radio" id="m43" name="formats" />
         <label for="m43">Micro Four Thirds</label>
         <br />
-        <input type="radio" id="apsc" name="apsc" />
+        <input type="radio" id="apsc" name="formats" />
         <label for="apsc">APS-C</label>
         <br />
-        <input type="radio" id="1inch" name="1inch" />
+        <input type="radio" id="1inch" name="formats" />
         <label for="1 inch">1 inch. Sensor</label>
         <br />
-
+        <br />
         <label for="fname">Your Lens mm.</label>
         <input type="number" id="fname" name="fname" size="6" maxlength="6" />
         <br />
