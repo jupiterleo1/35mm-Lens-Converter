@@ -57,5 +57,14 @@ padding-top: 1rem;
 .fname, .lname {
   width: 5ch;
   flex-wrap: nowrap;
-  flex-basis: ;
+}
+
+.submit-btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  align-self: center;
+  justify-self: center;
+
 }
