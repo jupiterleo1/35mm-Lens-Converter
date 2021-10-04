@@ -2,21 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 import React, { useState } from 'react';
+import { Heading } from 'heading';
 
 function Container() {
   return (
     <div className="box">
       <Heading />
       <Form />
-    </div>
-  );
-}
-
-function Heading() {
-  return (
-    <div>
-      <h1 className="title">35mm Lens Converter</h1>
-      <p className="title underline">1. Choose your Camera Format</p>
     </div>
   );
 }
@@ -57,10 +49,9 @@ function Buttons() {
       </button>
     </div>
   );
-  }
+}
 
 function Form() {
-
   return (
     <>
       <form className="forms" action="#">
