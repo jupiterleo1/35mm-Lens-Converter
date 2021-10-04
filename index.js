@@ -113,7 +113,7 @@ function Form() {
 
           <Buttons />
 
-          <label htmlFor="lname" className="thirty-five-label">
+          <label htmlFor="lname" className="thirty-five-label underline">
             35 mm equivalent
           </label>
 
