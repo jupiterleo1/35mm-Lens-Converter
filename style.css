@@ -117,10 +117,10 @@ input {
   padding: 0.3rem;
   border-radius: 10%;
   background-color: darkorange;
-  color: white;
-  box-shadow: 0.1rem 0.1rem black;
-  text-shadow: 0.02rem 0.1rem black;
+  color: black;
+  box-shadow: 0.1rem 0.1rem  rgba(0, 0, 0, 0.507);
 }
+
 .submit-btn:active {
   border-radius: 10%;
   background-color: crimson;
