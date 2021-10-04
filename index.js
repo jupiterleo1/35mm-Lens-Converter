@@ -23,7 +23,7 @@ function Form() {
   return (
     <>
       <form className="forms" action="#">
-        <input type="radio" id="m43" name="formats" />
+        <input type="radio" id="m43" name="formats" checked="checked" />
         <label htmlFor="m43">Micro Four Thirds</label>
         <br />
         <input type="radio" id="apsc" name="formats" />
@@ -44,7 +44,7 @@ function Form() {
             onClick={chooseFormat}
           />
 
-          <label htmlFor="lname">35 mm equivalent name:</label>
+          <label htmlFor="lname">35 mm equivalent</label>
           <br />
           <input
             type="number"
@@ -75,6 +75,8 @@ const heading = <Heading />;
 
 const calculateM43 = () =>{
   let input = document.getElementById("fname").value;
+  let input2 = document.getElementById("fname");
+  input2.setAttribute("checked","checked");
   let m43 = input * 2;
   let thirtyFiveConverted = document.getElementById("lname");
   thirtyFiveConverted.setAttribute("value", `${m43}`);
@@ -101,7 +103,7 @@ if(document.getElementById("m43").type === "radio" && document.getElementById("m
   calculateM43();
 }
 else if (
-  document.getElementById("apsc").type === "radio" && document.getElementById("apsc").id === "apsc"){
+  document.getElementById("apsc").id === "apsc"){
   calculateApsc();
 }
 else if( 
