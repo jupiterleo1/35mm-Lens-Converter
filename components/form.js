@@ -4,36 +4,32 @@ import Buttons from '../components/buttons';
 function Form() {
   const calculate = (e) => {
     e.preventDefault();
-    let input = document.getElementById('fname').value;
+
     let format;
+    let input = document.getElementById('fname').value;
+
+    let m43 = document.getElementById('m43');
+    let apsc = document.getElementById('apsc');
+    let oneInch = document.getElementById('oneinch');
+    let thirtyFiveConverted = document.getElementById('lname');
+
 
     if (document.getElementById('m43').checked) {
-      let m43 = document.getElementById('m43');
-
-      document.getElementById('m43').setAttribute('checked', '');
+      m43.setAttribute('checked', '');
       format = m43.getAttribute('cropfactor');
-      // format = 2;
-      console.log(format);
     } else if (document.getElementById('apsc').checked) {
-      let apsc = document.getElementById('apsc');
-
-      document.getElementById('apsc').setAttribute('checked', '');
+      apsc.setAttribute('checked', '');
       format = apsc.getAttribute('cropfactor');
-      console.log(format);
     } else if (document.getElementById('oneinch').checked) {
-      let oneInch = document.getElementById('oneinch');
-
       document.getElementById('oneinch').setAttribute('checked', '');
       format = oneInch.getAttribute('cropfactor');
-      console.log(format);
     } else {
       console.log('Nothing Selected');
     }
 
     let output = input * format;
 
-    let thirtyFiveConverted = document.getElementById('lname');
-    thirtyFiveConverted.setAttribute('value', `${output}`);
+    thirtyFiveConverted.setAttribute('value', `${output}mm`);
   };
 
   return (
@@ -50,7 +46,7 @@ function Form() {
               name="formats"
               cropfactor="2"
               className="choices"
-              onFocus={calculate}
+              // onFocus={calculate}
             />
           </li>
           <li>
@@ -63,7 +59,7 @@ function Form() {
               name="formats"
               className="choices"
               cropfactor="1.5"
-              onFocus={calculate}
+              // onFocus={calculate}
             />
           </li>
           <li>
@@ -76,7 +72,7 @@ function Form() {
               name="formats"
               className="choices"
               cropfactor="2.7"
-              onFocus={calculate}
+              // onFocus={calculate}
             />
           </li>
         </ul>
@@ -93,7 +89,7 @@ function Form() {
           </label>
 
           <input
-            type="number"
+            type="text"
             id="lname"
             className="lname"
             name="lname"

@@ -88,9 +88,12 @@ input {
   width: 7ch;
   /* flex-wrap: nowrap; */
   justify-content: center;
+  justify-items: center;
   align-content: center;
   align-self: center;
   font-size: 1rem;
+  text-align: center;
+
 }
 
 .your-lens-label,
@@ -147,4 +150,10 @@ input {
 
 .underline {
   text-decoration: underline;
+}
+
+.footer{
+  font-size: .7rem;
+  text-align: center;
+  margin-top: 1rem;
 }

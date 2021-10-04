@@ -19,6 +19,7 @@ function Buttons() {
   }
 
   return (
+    <>
     <div className="btn-up-down">
       <input
         type="number"
@@ -27,6 +28,7 @@ function Buttons() {
         name="fname"
         maxLength="5"
         min="0"
+        disabled
       />
       <button className="btn" onClick={increment}>
         +
@@ -35,6 +37,7 @@ function Buttons() {
         -
       </button>
     </div>
+    </>
   );
 }
 
