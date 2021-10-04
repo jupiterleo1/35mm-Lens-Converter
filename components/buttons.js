@@ -1,7 +1,6 @@
 import React from 'react';
 import React, { useState } from 'react';
 
-
 function Buttons() {
   const [mm, setCrop] = useState(0);
 
@@ -28,7 +27,6 @@ function Buttons() {
         name="fname"
         maxLength="5"
         min="0"
-        // onClick={useState}
       />
       <button className="btn" onClick={increment}>
         +
