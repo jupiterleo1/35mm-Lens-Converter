@@ -45,7 +45,6 @@ function Form() {
             className="fname"
             name="fname"
             maxLength="5"
-            value="25"
             // onClick={chooseFormat}
           />
 
@@ -57,7 +56,7 @@ function Form() {
             className="lname"
             name="lname"
             maxLength="5"
-            disabled
+            disabled 
             
           />
         </div>
@@ -106,6 +105,16 @@ const calculate1inch = (mm) => {
   let oneInch = input * 2.7;
   let thirtyFiveConverted = document.getElementById("lname");
   thirtyFiveConverted.setAttribute("value", `${oneInch}`);
+}
+
+const calculate = () =>{
+  let input = document.getElementById("fname").value;
+  let input2 = document.getElementById("fname");
+  input2.setAttribute("checked","");
+  let m43 = input * 2;
+  let thirtyFiveConverted = document.getElementById("lname");
+  thirtyFiveConverted.setAttribute("value", `${m43}`);
+
 }
 
 const chooseFormat = (e) => {

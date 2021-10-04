@@ -85,7 +85,7 @@ align-content: center;
 }
 
 .fname, .lname {
-  width: 5ch;
+  width: 7ch;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: center;
