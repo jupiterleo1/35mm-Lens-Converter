@@ -1,41 +1,41 @@
 import React from 'react';
-import Buttons from './components/buttons';
-
-const calculate = (e) => {
-  e.preventDefault();
-  let input = document.getElementById('fname').value;
-  let format;
-
-  if (document.getElementById('m43').checked) {
-    let m43 = document.getElementById('m43');
-
-    document.getElementById('m43').setAttribute('checked', '');
-    format = m43.getAttribute('cropfactor');
-    // format = 2;
-    console.log(format);
-  } else if (document.getElementById('apsc').checked) {
-    let apsc = document.getElementById('apsc');
-
-    document.getElementById('apsc').setAttribute('checked', '');
-    format = apsc.getAttribute('cropfactor');
-    console.log(format);
-  } else if (document.getElementById('oneinch').checked) {
-    let oneInch = document.getElementById('oneinch');
-
-    document.getElementById('oneinch').setAttribute('checked', '');
-    format = oneInch.getAttribute('cropfactor');
-    console.log(format);
-  } else {
-    console.log('Nothing Selected');
-  }
-
-  let output = input * format;
-
-  let thirtyFiveConverted = document.getElementById('lname');
-  thirtyFiveConverted.setAttribute('value', `${output}`);
-};
+import Buttons from '../components/buttons';
 
 function Form() {
+  const calculate = (e) => {
+    e.preventDefault();
+    let input = document.getElementById('fname').value;
+    let format;
+
+    if (document.getElementById('m43').checked) {
+      let m43 = document.getElementById('m43');
+
+      document.getElementById('m43').setAttribute('checked', '');
+      format = m43.getAttribute('cropfactor');
+      // format = 2;
+      console.log(format);
+    } else if (document.getElementById('apsc').checked) {
+      let apsc = document.getElementById('apsc');
+
+      document.getElementById('apsc').setAttribute('checked', '');
+      format = apsc.getAttribute('cropfactor');
+      console.log(format);
+    } else if (document.getElementById('oneinch').checked) {
+      let oneInch = document.getElementById('oneinch');
+
+      document.getElementById('oneinch').setAttribute('checked', '');
+      format = oneInch.getAttribute('cropfactor');
+      console.log(format);
+    } else {
+      console.log('Nothing Selected');
+    }
+
+    let output = input * format;
+
+    let thirtyFiveConverted = document.getElementById('lname');
+    thirtyFiveConverted.setAttribute('value', `${output}`);
+  };
+
   return (
     <>
       <form className="forms" action="#">
