@@ -19,6 +19,7 @@ h1{
   flex-direction: column;
   flex-flow: row;
   width: 50vw;
+  min-width: 250px;
   border: 0.5rem solid ghostwhite;
   padding: 5vh;
   /* margin: 30% auto; /*  border-radius: 1rem; */
@@ -69,13 +70,18 @@ align-content: center;
 }
 
 .formats{
-  
-  flex-direction: column;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
   align-content: center;
-  align-self: center;
-  justify-self: center;
-  flex-wrap: nowrap;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  list-style: none;
+}
+
+.choices{
+   align-self: center;
+   justify-self: center;
 }
 
 .fname, .lname {

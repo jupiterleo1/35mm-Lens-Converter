@@ -24,16 +24,19 @@ function Form() {
   return (
     <>
       <form className="forms" action="#">
-        <div className="formats">
-        <input type="radio" id="m43" name="formats" className="choices" checked onFocus={chooseFormat} />
-        <label htmlFor="m43">Micro Four Thirds</label>
-        <br />
-        <input type="radio" id="apsc" name="formats" className="choices"  onFocus={chooseFormat} />
-        <label htmlFor="apsc">APS-C</label>
-        <br />
-        <input type="radio" id="oneinch" name="formats" className="choices" onFocus={chooseFormat}/>
-        <label htmlFor="oneinch">1 inch. Sensor</label>
-        </div>
+       
+          <ul className="formats">
+            <li>
+            <label htmlFor="m43" className="choices">Micro Four Thirds</label>
+            <input type="radio" id="m43" name="formats" className="choices" checked onFocus={chooseFormat} />
+       </li>
+            <li>       <label className="choices" htmlFor="apsc">APS-C</label> <input type="radio" id="apsc" name="formats" className="choices"  onFocus={chooseFormat} />
+ </li>
+            <li><label className="choices" htmlFor="oneinch">1 inch. Sensor</label><input type="radio" id="oneinch" name="formats" className="choices" onFocus={chooseFormat}/>
+        </li>
+            </ul>
+    
+        
         <div className="labels">
           <label htmlFor="fname" className="your-lens-label">Your Lens mm.</label>
           <input
@@ -42,6 +45,7 @@ function Form() {
             className="fname"
             name="fname"
             maxLength="5"
+            value="25"
             // onClick={chooseFormat}
           />
 
@@ -53,6 +57,7 @@ function Form() {
             className="lname"
             name="lname"
             maxLength="5"
+            disabled
             
           />
         </div>
