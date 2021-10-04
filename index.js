@@ -95,7 +95,8 @@ const calculate1inch = (mm) => {
   thirtyFiveConverted.setAttribute("value", `${oneInch}`);
 }
 
-const chooseFormat = () => {
+const chooseFormat = (e) => {
+  e.preventDefault;
 if(document.getElementById("m43").type === "radio" && document.getElementById("m43").htmlFor === "m43"){
   calculateM43();
 }
@@ -110,8 +111,7 @@ calculate1inch();
 else {
 console.log("Not working");
 }
-
+}
 
 ReactDOM.render(container, document.getElementById('root'));
 
-}
