@@ -23,13 +23,13 @@ function Form() {
   return (
     <>
       <form className="forms" action="#">
-        <input type="radio" id="m43" name="formats" checked="checked" />
+        <input type="radio" id="m43" name="formats" onFocus={chooseFormat} />
         <label htmlFor="m43">Micro Four Thirds</label>
         <br />
-        <input type="radio" id="apsc" name="formats" />
+        <input type="radio" id="apsc" name="formats" onFocus={chooseFormat} />
         <label htmlFor="apsc">APS-C</label>
         <br />
-        <input type="radio" id="oneinch" name="formats" />
+        <input type="radio" id="oneinch" name="formats" onFocus={chooseFormat}/>
         <label htmlFor="oneinch">1 inch. Sensor</label>
         <br />
         <br />
@@ -76,7 +76,7 @@ const heading = <Heading />;
 const calculateM43 = () =>{
   let input = document.getElementById("fname").value;
   let input2 = document.getElementById("fname");
-  input2.setAttribute("checked","checked");
+  input2.setAttribute("checked","");
   let m43 = input * 2;
   let thirtyFiveConverted = document.getElementById("lname");
   thirtyFiveConverted.setAttribute("value", `${m43}`);
@@ -85,6 +85,8 @@ const calculateM43 = () =>{
 
 const calculateApsc = (mm) => { 
   let input = document.getElementById("fname").value;
+  let input2 = document.getElementById("fname");
+  input2.setAttribute("checked","");
   let apsc = input * 1.5;
   let thirtyFiveConverted = document.getElementById("lname");
   thirtyFiveConverted.setAttribute("value", `${apsc}`);
@@ -97,17 +99,16 @@ const calculate1inch = (mm) => {
   thirtyFiveConverted.setAttribute("value", `${oneInch}`);
 }
 
-const chooseFormat = (e) => {
-  e.preventDefault();
-if(document.getElementById("m43").type === "radio" && document.getElementById("m43").id === "m43"){
+const chooseFormat = () => {
+if(document.getElementById("m43").checked){
   calculateM43();
 }
 else if (
-  document.getElementById("apsc").id === "apsc"){
-  calculateApsc();
+  document.getElementById("apsc").checked){
+calculateApsc();
 }
 else if( 
-document.getElementById("oneinch").type === "radio" && document.getElementById("oneinch").id === "oneinch"){
+document.getElementById("oneinch").checked){
 calculate1inch();
 }
 else {
