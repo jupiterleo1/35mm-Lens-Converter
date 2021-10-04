@@ -16,84 +16,100 @@ function Heading() {
   return (
     <div>
       <h1 className="title">35mm Lens Converter</h1>
+      <p className="title underline">1. Choose your Camera Format</p>
     </div>
   );
 }
 
 function Form() {
-  
+  function Buttons() {
+    const [mm, setCrop] = useState(0);
 
-function Buttons(){
-  const [mm, setCrop] = useState(0);
-  
-function increment(e){
-  e.preventDefault()
-  setCrop(mm+1)
-document.getElementById("fname").value =  mm;
-console.log(mm)
-}
+    function increment(e) {
+      e.preventDefault();
+      setCrop(mm + 1);
+      document.getElementById('fname').value = mm;
+      console.log(mm);
+    }
 
-function decrement(e){
-  e.preventDefault()
-  setCrop(mm-1)
-  document.getElementById("fname").value =  mm;
-  console.log(mm)
-}
-return <div className="btn-up-down">
-  <input
-            type="number"
-            id="fname"
-            className="fname btn"
-            name="fname"
-            maxLength="5"
-            min="0"
-            // onClick={useState}
-          />
-<button className="btn" onClick={increment}>+</button>
-<button className="btn" onClick={decrement}>-</button>
-</div>
-}
+    function decrement(e) {
+      e.preventDefault();
+      setCrop(mm - 1);
+      document.getElementById('fname').value = mm;
+      console.log(mm);
+    }
+    return (
+      <div className="btn-up-down">
+        <input
+          type="number"
+          id="fname"
+          className="fname btn"
+          name="fname"
+          maxLength="5"
+          min="0"
+          // onClick={useState}
+        />
+        <button className="btn" onClick={increment}>
+          +
+        </button>
+        <button className="btn" onClick={decrement}>
+          -
+        </button>
+      </div>
+    );
+  }
 
   return (
     <>
-     
       <form className="forms" action="#">
         <ul className="formats">
           <li>
             <label htmlFor="m43" className="choices">
-              Micro Four Thirds
+              Micro Four Thirds: 2X Crop
             </label>
-            <input type="radio" id="m43" name="formats" cropfactor="2" className="choices" onFocus={calculate}/> 
+            <input
+              type="radio"
+              id="m43"
+              name="formats"
+              cropfactor="2"
+              className="choices"
+              onFocus={calculate}
+            />
           </li>
           <li>
             <label className="choices" htmlFor="apsc">
-              APS-C mm
+              APS-C: 1.5x Crop
             </label>
-            <input type="radio" id="apsc" name="formats" className="choices" cropfactor="1.5"
-            onFocus={calculate}  />
+            <input
+              type="radio"
+              id="apsc"
+              name="formats"
+              className="choices"
+              cropfactor="1.5"
+              onFocus={calculate}
+            />
           </li>
           <li>
             <label className="choices" htmlFor="oneinch">
-              1 inch. Sensor
+              1 inch: 2.7x Crop
             </label>
             <input
               type="radio"
               id="oneinch"
               name="formats"
               className="choices"
-              cropfactor="2.7" 
+              cropfactor="2.7"
               onFocus={calculate}
             />
           </li>
         </ul>
 
         <div className="labels">
-          <label htmlFor="fname" className="your-lens-label">
-            Your Lens mm.
+          <label htmlFor="fname" className="your-lens-label underline">
+            2. Enter your Lens mm.
           </label>
-          
+
           <Buttons />
-          
 
           <label htmlFor="lname" className="thirty-five-label">
             35 mm equivalent
@@ -157,31 +173,25 @@ const calculate = (e) => {
   e.preventDefault();
   let input = document.getElementById('fname').value;
   let format;
-  
-
 
   if (document.getElementById('m43').checked) {
     let m43 = document.getElementById('m43');
 
-    
-    document.getElementById('m43').setAttribute('checked', '')
-    format = m43.getAttribute("cropfactor")
+    document.getElementById('m43').setAttribute('checked', '');
+    format = m43.getAttribute('cropfactor');
     // format = 2;
     console.log(format);
   } else if (document.getElementById('apsc').checked) {
     let apsc = document.getElementById('apsc');
 
-    
     document.getElementById('apsc').setAttribute('checked', '');
-    format = apsc.getAttribute("cropfactor");
+    format = apsc.getAttribute('cropfactor');
     console.log(format);
-  } 
-  
-  else if (document.getElementById('oneinch').checked) {
+  } else if (document.getElementById('oneinch').checked) {
     let oneInch = document.getElementById('oneinch');
-    
+
     document.getElementById('oneinch').setAttribute('checked', '');
-    format = oneInch.getAttribute("cropfactor");
+    format = oneInch.getAttribute('cropfactor');
     console.log(format);
   } else {
     console.log('Nothing Selected');

@@ -61,7 +61,7 @@ input {
 flex-direction: column;
 border-top: .2rem solid whitesmoke;
 border-bottom: .2rem solid whitesmoke;
-padding-top: 1rem;
+padding: 1rem 0;
 justify-self: center;
 align-self: center;
 justify-content: center;
@@ -92,6 +92,7 @@ align-content: center;
   align-self: center;
   font-size: 1rem;
 }
+
 
 .your-lens-label, .thirty-five-label{
   flex-wrap: nowrap;
@@ -133,3 +134,13 @@ color:white;
   align-content: center;
   align-self: center;
 }
+
+.btn{
+  height: fit-content;
+  width:8ch
+}
+
+.underline{
+  text-decoration: underline;
+}
+
