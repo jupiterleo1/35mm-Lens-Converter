@@ -21,6 +21,9 @@ function Heading() {
 }
 
 function Form() {
+  
+
+function Buttons(){
   const [mm, setCrop] = useState(0);
   
 function increment(e){
@@ -36,9 +39,16 @@ function decrement(e){
   document.getElementById("fname").value =  mm;
   console.log(mm)
 }
-
-function Buttons(){
 return <div className="btn-up-down">
+  <input
+            type="number"
+            id="fname"
+            className="fname btn"
+            name="fname"
+            maxLength="5"
+            min="0"
+            // onClick={useState}
+          />
 <button className="btn" onClick={increment}>+</button>
 <button className="btn" onClick={decrement}>-</button>
 </div>
@@ -81,15 +91,7 @@ return <div className="btn-up-down">
           <label htmlFor="fname" className="your-lens-label">
             Your Lens mm.
           </label>
-          <input
-            type="number"
-            id="fname"
-            className="fname"
-            name="fname"
-            maxLength="5"
-            min="0"
-            // onClick={useState}
-          />
+          
           <Buttons />
           
 
