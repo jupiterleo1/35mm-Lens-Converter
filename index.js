@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
+import React, { useState } from 'react'; 
 
 function Container() {
   return (
@@ -23,29 +24,29 @@ function Form() {
   return (
     <>
       <form className="forms" action="#">
-        <input type="radio" id="m43" name="formats" onFocus={chooseFormat} />
+        <div className="formats">
+        <input type="radio" id="m43" name="formats" className="choices" checked onFocus={chooseFormat} />
         <label htmlFor="m43">Micro Four Thirds</label>
         <br />
-        <input type="radio" id="apsc" name="formats" onFocus={chooseFormat} />
+        <input type="radio" id="apsc" name="formats" className="choices"  onFocus={chooseFormat} />
         <label htmlFor="apsc">APS-C</label>
         <br />
-        <input type="radio" id="oneinch" name="formats" onFocus={chooseFormat}/>
+        <input type="radio" id="oneinch" name="formats" className="choices" onFocus={chooseFormat}/>
         <label htmlFor="oneinch">1 inch. Sensor</label>
-        <br />
-        <br />
+        </div>
         <div className="labels">
-          <label htmlFor="fname">Your Lens mm.</label>
+          <label htmlFor="fname" className="your-lens-label">Your Lens mm.</label>
           <input
             type="number"
             id="fname"
             className="fname"
             name="fname"
             maxLength="5"
-            onClick={chooseFormat}
+            // onClick={chooseFormat}
           />
 
-          <label htmlFor="lname">35 mm equivalent</label>
-          <br />
+          <label htmlFor="lname" className="thirty-five-label">35 mm equivalent</label>
+        
           <input
             type="number"
             id="lname"
@@ -56,13 +57,16 @@ function Form() {
           />
         </div>
         <br />
+        <div className="submit-container">
         <input
           type="submit"
           className="submit-btn"
           value="Convert"
-          // onSubmit={}
+          onClick={chooseFormat}
         />
+        </div>
       </form>
+      
     </>
   );
 }
@@ -99,8 +103,9 @@ const calculate1inch = (mm) => {
   thirtyFiveConverted.setAttribute("value", `${oneInch}`);
 }
 
-const chooseFormat = () => {
-if(document.getElementById("m43").checked){
+const chooseFormat = (e) => {
+  e.preventDefault();
+  if(document.getElementById("m43").checked){
   calculateM43();
 }
 else if (

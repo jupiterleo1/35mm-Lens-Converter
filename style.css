@@ -1,6 +1,16 @@
+*{
+  margin:0;
+  padding:0;
+}
+
 h1,
 p {
   font-family: Lato;
+}
+
+h1{
+  font-size: 1.2rem;
+  margin:1rem 0;
 }
 
 .box {
@@ -9,7 +19,6 @@ p {
   flex-direction: column;
   flex-flow: row;
   width: 50vw;
-  height: auto;
   border: 0.5rem solid ghostwhite;
   padding: 5vh;
   /* margin: 30% auto; /*  border-radius: 1rem; */
@@ -48,23 +57,64 @@ input {
 
 .labels{
   display: flex;
-flex-direction: row;
+flex-direction: column;
 border-top: .2rem solid whitesmoke;
+border-bottom: .2rem solid whitesmoke;
 padding-top: 1rem;
+justify-self: center;
+align-self: center;
+justify-content: center;
+align-content: center;
+
 }
 
+.formats{
+  
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  justify-self: center;
+  flex-wrap: nowrap;
+}
 
 .fname, .lname {
   width: 5ch;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  font-size: 1rem;
 }
 
-.submit-btn{
+.your-lens-label, .thirty-five-label{
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+}
+
+.submit-container{
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-items: center;
   align-self: center;
   justify-self: center;
+justify-content: center;
+align-content: center;
+flex-wrap: nowrap;
+}
 
+.submit-btn{
+ margin:0;
+ padding: .3rem;
+border-radius: 10%;
+background-color: darkorange;
+color:white;
+box-shadow: .1rem .1rem black;
+}
+.submit-btn:active{
+  border-radius: 10%;
+background-color:crimson;
+color:white;
 }
