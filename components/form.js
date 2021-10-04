@@ -38,7 +38,7 @@ function Form() {
         <ul className="formats">
           <li>
             <label htmlFor="m43" className="choices">
-              Micro Four Thirds: 2X Crop
+              Micro 4/3: 2X Crop
             </label>
             <input
               type="radio"
