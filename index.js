@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 import React, { useState } from 'react';
-import { Heading } from 'heading';
+import Heading  from './components/heading';
+import Buttons  from './components/buttons';
 
 function Container() {
   return (
@@ -13,43 +14,7 @@ function Container() {
   );
 }
 
-function Buttons() {
-  const [mm, setCrop] = useState(0);
 
-  function increment(e) {
-    e.preventDefault();
-    setCrop(mm + 1);
-    document.getElementById('fname').value = mm;
-    console.log(mm);
-  }
-
-  function decrement(e) {
-    e.preventDefault();
-    setCrop(mm - 1);
-    document.getElementById('fname').value = mm;
-    console.log(mm);
-  }
-
-  return (
-    <div className="btn-up-down">
-      <input
-        type="number"
-        id="fname"
-        className="fname btn"
-        name="fname"
-        maxLength="5"
-        min="0"
-        // onClick={useState}
-      />
-      <button className="btn" onClick={increment}>
-        +
-      </button>
-      <button className="btn" onClick={decrement}>
-        -
-      </button>
-    </div>
-  );
-}
 
 function Form() {
   return (
