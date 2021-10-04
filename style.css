@@ -85,7 +85,7 @@ input {
 
 .fname,
 .lname {
-  width: 7ch;
+  width: 10ch;
   /* flex-wrap: nowrap; */
   justify-content: center;
   justify-items: center;

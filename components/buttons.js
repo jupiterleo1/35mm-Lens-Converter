@@ -2,7 +2,7 @@ import React from 'react';
 import React, { useState } from 'react';
 
 function Buttons() {
-  const [mm, setCrop] = useState(0);
+  const [mm, setCrop] = useState(25);
 
   function increment(e) {
     e.preventDefault();
@@ -20,23 +20,23 @@ function Buttons() {
 
   return (
     <>
-    <div className="btn-up-down">
-      <input
-        type="number"
-        id="fname"
-        className="fname btn"
-        name="fname"
-        maxLength="5"
-        min="0"
-        disabled
-      />
-      <button className="btn" onClick={increment}>
-        +
-      </button>
-      <button className="btn" onClick={decrement}>
-        -
-      </button>
-    </div>
+      <div className="btn-up-down">
+        <input
+          type="number"
+          id="fname"
+          className="fname btn"
+          name="fname"
+          maxLength="5"
+          min="0"
+          disabled
+        />
+        <button className="btn" onClick={increment}>
+          +
+        </button>
+        <button className="btn" onClick={decrement}>
+          -
+        </button>
+      </div>
     </>
   );
 }
