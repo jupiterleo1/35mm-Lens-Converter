@@ -96,16 +96,16 @@ const calculate1inch = (mm) => {
 }
 
 const chooseFormat = (e) => {
-  e.preventDefault;
-if(document.getElementById("m43").type === "radio" && document.getElementById("m43").htmlFor === "m43"){
+  e.preventDefault();
+if(document.getElementById("m43").type === "radio" && document.getElementById("m43").id === "m43"){
   calculateM43();
 }
 else if (
-  document.getElementById("apsc").type === "radio" && document.getElementById("apsc").htmlFor === "apsc"){
+  document.getElementById("apsc").type === "radio" && document.getElementById("apsc").id === "apsc"){
   calculateApsc();
 }
 else if( 
-document.getElementById("oneinch").type === "radio" && document.getElementById("oneinch").htmlFor === "oneinch"){
+document.getElementById("oneinch").type === "radio" && document.getElementById("oneinch").id === "oneinch"){
 calculate1inch();
 }
 else {
