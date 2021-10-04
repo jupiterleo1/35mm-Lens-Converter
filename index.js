@@ -29,8 +29,8 @@ function Form() {
         <input type="radio" id="apsc" name="formats" />
         <label htmlFor="apsc">APS-C</label>
         <br />
-        <input type="radio" id="1inch" name="formats" />
-        <label htmlFor="1 inch">1 inch. Sensor</label>
+        <input type="radio" id="oneinch" name="formats" />
+        <label htmlFor="oneinch">1 inch. Sensor</label>
         <br />
         <br />
         <div className="labels">
@@ -40,7 +40,8 @@ function Form() {
             id="fname"
             className="fname"
             name="fname"
-            maxlength="5"
+            maxLength="5"
+            onClick={chooseFormat}
           />
 
           <label htmlFor="lname">35 mm equivalent name:</label>
@@ -50,7 +51,8 @@ function Form() {
             id="lname"
             className="lname"
             name="lname"
-            maxlength="5"
+            maxLength="5"
+            
           />
         </div>
         <br />
@@ -58,7 +60,7 @@ function Form() {
           type="submit"
           className="submit-btn"
           value="Convert"
-          onSubmit="calculateM43"
+          // onSubmit={}
         />
       </form>
     </>
@@ -71,22 +73,45 @@ const form = <Form />;
 
 const heading = <Heading />;
 
-const calculateM43 = (mm) =>{
-  let m43 = mm * 2;
-  console.log(m43);
+const calculateM43 = () =>{
+  let input = document.getElementById("fname").value;
+  let m43 = input * 2;
+  let thirtyFiveConverted = document.getElementById("lname");
+  thirtyFiveConverted.setAttribute("value", `${m43}`);
+
 }
 
-const calculateApsc = (mm) =>{
-  let aspc = mm * 1.5;
-  return apsc
+const calculateApsc = (mm) => { 
+  let input = document.getElementById("fname").value;
+  let apsc = input * 1.5;
+  let thirtyFiveConverted = document.getElementById("lname");
+  thirtyFiveConverted.setAttribute("value", `${apsc}`);
 }
 
-const calculate1inch = (mm) =>{
-  return mm * 2.7;
+const calculate1inch = (mm) => {
+  let input = document.getElementById("fname").value;
+  let oneInch = input * 2.7;
+  let thirtyFiveConverted = document.getElementById("lname");
+  thirtyFiveConverted.setAttribute("value", `${oneInch}`);
 }
 
-
-
+const chooseFormat = () => {
+if(document.getElementById("m43").type === "radio" && document.getElementById("m43").htmlFor === "m43"){
+  calculateM43();
+}
+else if (
+  document.getElementById("apsc").type === "radio" && document.getElementById("apsc").htmlFor === "apsc"){
+  calculateApsc();
+}
+else if( 
+document.getElementById("oneinch").type === "radio" && document.getElementById("oneinch").htmlFor === "oneinch"){
+calculate1inch();
+}
+else {
+console.log("Not working");
+}
 
 
 ReactDOM.render(container, document.getElementById('root'));
+
+}
