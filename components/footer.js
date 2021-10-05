@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer(){
 return <>
-<p class="footer">React Sample Project by Joe</p>
+<p className="footer">React Sample Project by Joe</p>
 </>
 }
 
