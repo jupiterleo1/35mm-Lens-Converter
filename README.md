@@ -22,7 +22,7 @@ Logic:
 Styling CSS:
 
 1. Flexbox for container and layout.
-2. Background image fr pexels.com
+2. Background image from pexels.com
 3. Pseudo class :active for calculate button.
 4. Background-color for +/- button.
 
