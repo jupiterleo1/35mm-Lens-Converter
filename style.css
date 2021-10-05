@@ -10,7 +10,10 @@ p, label {
 
 h1 {
   font-size: 1.4rem;
-  margin: 1rem 0;
+  margin: 0 0  1rem 0;
+  color:white;
+  font-family: "Trirong", sans-serif;
+  text-shadow: .1rem .05rem .1rem black;
 }
 
 .box {
