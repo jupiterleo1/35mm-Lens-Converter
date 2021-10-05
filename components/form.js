@@ -60,6 +60,7 @@ roundedOutput = round(output, 1);
               name="formats"
               cropfactor="2"
               className="choices"
+              checked
             />
             <label htmlFor="m43" className="choices">
             Micro 4/3 :
