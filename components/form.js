@@ -38,7 +38,7 @@ function Form() {
         <ul className="formats">
           <li>
             <label htmlFor="m43" className="choices">
-              Micro 4/3: 2X Crop
+            <a href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Afour-thirds" target=" blank"> Micro 4/3: 2X Crop</a>
             </label>
             <input
               type="radio"
@@ -46,12 +46,12 @@ function Form() {
               name="formats"
               cropfactor="2"
               className="choices"
-              // onFocus={calculate}
             />
           </li>
           <li>
             <label className="choices" htmlFor="apsc">
-              APS-C: 1.5x Crop
+            <a href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Aaps-c-lenses" target=" blank">APS-C: 1.5x Crop</a>
+              
             </label>
             <input
               type="radio"
@@ -64,7 +64,8 @@ function Form() {
           </li>
           <li>
             <label className="choices" htmlFor="oneinch">
-              1 inch: 2.7x Crop
+            <a href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3A1in" target=" blank">1 inch: 2.7x Crop</a>
+              
             </label>
             <input
               type="radio"
@@ -78,13 +79,13 @@ function Form() {
         </ul>
 
         <div className="labels">
-          <label htmlFor="fname" className="your-lens-label underline">
+          <label htmlFor="fname" className="your-lens-label ">
             2. Enter your Lens mm.
           </label>
 
           <Buttons />
 
-          <label htmlFor="lname" className="thirty-five-label underline">
+          <label htmlFor="lname" className="thirty-five-label ">
             35 mm equivalent
           </label>
 

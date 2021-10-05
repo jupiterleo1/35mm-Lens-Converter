@@ -8,14 +8,12 @@ function Buttons() {
     e.preventDefault();
     setCrop(mm + 1);
     document.getElementById('fname').value = mm;
-    console.log(mm);
   }
 
   function decrement(e) {
     e.preventDefault();
     setCrop(mm - 1);
     document.getElementById('fname').value = mm;
-    console.log(mm);
   }
 
   return (
