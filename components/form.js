@@ -4,6 +4,7 @@ import Buttons from '../components/buttons';
 function Form() {
   const calculate = (e) => {
     e.preventDefault();
+    
 
     let format;
     let input = document.getElementById('fname').value;
@@ -14,6 +15,13 @@ function Form() {
     let thirtyFiveConverted = document.getElementById('lname');
 
     let roundedOutput;
+
+
+    function removeChecked(){
+      m43.removeAttribute("checked");
+    }
+
+    setTimeout(removeChecked, 10000);
 
     if (document.getElementById('m43').checked) {
       m43.setAttribute('checked', '');
