@@ -38,7 +38,7 @@ function Form() {
         <ul className="formats">
           <li>
             <label htmlFor="m43" className="choices">
-            <a href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Afour-thirds" target=" blank"> Micro 4/3: 2X Crop</a>
+            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Afour-thirds" target=" blank"> Micro 4/3: 2X Crop</a>
             </label>
             <input
               type="radio"
@@ -50,7 +50,7 @@ function Form() {
           </li>
           <li>
             <label className="choices" htmlFor="apsc">
-            <a href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Aaps-c-lenses" target=" blank">APS-C: 1.5x Crop</a>
+            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Aaps-c-lenses" target=" blank">APS-C: 1.5x Crop</a>
               
             </label>
             <input
@@ -59,12 +59,11 @@ function Form() {
               name="formats"
               className="choices"
               cropfactor="1.5"
-              // onFocus={calculate}
             />
           </li>
           <li>
             <label className="choices" htmlFor="oneinch">
-            <a href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3A1in" target=" blank">1 inch: 2.7x Crop</a>
+            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3A1in" target=" blank">1 inch: 2.7x Crop</a>
               
             </label>
             <input
@@ -73,7 +72,6 @@ function Form() {
               name="formats"
               className="choices"
               cropfactor="2.7"
-              // onFocus={calculate}
             />
           </li>
         </ul>
