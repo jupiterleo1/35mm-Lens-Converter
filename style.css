@@ -96,7 +96,8 @@ input {
   align-self: center;
   font-size: 1.1rem;
   text-align: center;
-  background-color:wheat;
+  background-color:rgb(250, 241, 225);
+  font-family: Lato;
 }
 
 .your-lens-label,
@@ -152,6 +153,7 @@ input {
   margin: 1rem 0.2rem;
   font-size: 1rem;
   font-weight: 1000;
+
 }
 
 .underline {
