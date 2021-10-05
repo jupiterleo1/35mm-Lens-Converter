@@ -13,6 +13,7 @@ function Form() {
     let oneInch = document.getElementById('oneinch');
     let thirtyFiveConverted = document.getElementById('lname');
 
+    let roundedOutput;
 
     if (document.getElementById('m43').checked) {
       m43.setAttribute('checked', '');
@@ -29,7 +30,14 @@ function Form() {
 
     let output = input * format;
 
-    thirtyFiveConverted.setAttribute('value', `${output}mm`);
+    function round(value, precision) {
+      var multiplier = Math.pow(10, precision || 0);
+      return Math.round(value * multiplier) / multiplier;
+  }
+
+roundedOutput = round(output, 1);
+
+    thirtyFiveConverted.setAttribute('value', `${roundedOutput}mm`);
   };
 
   return (

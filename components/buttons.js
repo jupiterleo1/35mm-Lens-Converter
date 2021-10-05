@@ -12,7 +12,9 @@ function Buttons() {
 
   function decrement(e) {
     e.preventDefault();
-    setCrop(mm - 1);
+    if(mm > 0){
+      setCrop(mm - 1);
+    }
     document.getElementById('fname').value = mm;
   }
 
