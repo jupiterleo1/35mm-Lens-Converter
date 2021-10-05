@@ -59,8 +59,8 @@ input {
 .labels {
   display: flex;
   flex-direction: column;
-  border-top: 0.2rem solid whitesmoke;
-  border-bottom: 0.2rem solid whitesmoke;
+  border-top: 0.2rem ridge whitesmoke;
+  border-bottom: 0.2rem ridge whitesmoke;
   padding: 1rem 0;
   justify-self: center;
   align-self: center;
@@ -119,6 +119,7 @@ input {
   margin: 0;
   padding: 0.3rem;
   border-radius: 10%;
+  border-style: ridge;
   background-color: darkorange;
   color: black;
   box-shadow: 0.1rem 0.1rem  rgba(0, 0, 0, 0.507);
@@ -164,3 +165,4 @@ input {
   color:darkviolet;
   padding-left: 1rem;
 }
+
