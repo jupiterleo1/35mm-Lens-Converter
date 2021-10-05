@@ -91,9 +91,8 @@ input {
   justify-items: center;
   align-content: center;
   align-self: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
-
 }
 
 .your-lens-label,
@@ -122,7 +121,7 @@ input {
   border-style: ridge;
   background-color: darkorange;
   color: black;
-  box-shadow: 0.1rem 0.1rem  rgba(0, 0, 0, 0.507);
+  box-shadow: 0.1rem 0.1rem  rgba(0, 0, 0, 0.5);
 }
 
 .submit-btn:active {
