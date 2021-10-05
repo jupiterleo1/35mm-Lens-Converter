@@ -28,10 +28,10 @@ function Buttons() {
           min="0"
           disabled
         />
-        <button className="btn" onClick={increment}>
+        <button className="btn btn-up-color" onClick={increment}>
           +
         </button>
-        <button className="btn" onClick={decrement}>
+        <button className="btn btn-down-color" onClick={decrement}>
           -
         </button>
       </div>
