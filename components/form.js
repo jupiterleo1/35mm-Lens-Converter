@@ -15,21 +15,14 @@ function Form() {
     let thirtyFiveConverted = document.getElementById('lname');
 
     let roundedOutput;
-
-
-    function removeChecked(){
-      m43.removeAttribute("checked");
-    }
-
-    setTimeout(removeChecked, 10000);
-
+    
     if (document.getElementById('m43').checked) {
       m43.setAttribute('checked', '');
       format = m43.getAttribute('cropfactor');
     } else if (document.getElementById('apsc').checked) {
       apsc.setAttribute('checked', '');
       format = apsc.getAttribute('cropfactor');
-    } else if (document.getElementById('oneinch').checked) {
+    } else if (document.getElementById('oneinch').checked) {      
       document.getElementById('oneinch').setAttribute('checked', '');
       format = oneInch.getAttribute('cropfactor');
     } else {
@@ -48,6 +41,14 @@ roundedOutput = round(output, 1);
     thirtyFiveConverted.setAttribute('value', `${roundedOutput}mm`);
   };
 
+  function showCalculator(){
+    let calculator = document.getElementById("calculator");
+    let calculateButton = document.getElementById("submit-button")
+
+    calculator.classList.remove("hide");
+    calculateButton.classList.remove("hide");
+  }
+
   return (
     <>
       <form className="forms" action="#">
@@ -60,7 +61,7 @@ roundedOutput = round(output, 1);
               name="formats"
               cropfactor="2"
               className="choices"
-              checked
+              onClick={showCalculator}
             />
             <label htmlFor="m43" className="choices">
             Micro 4/3 :
@@ -75,6 +76,7 @@ roundedOutput = round(output, 1);
               name="formats"
               className="choices"
               cropfactor="1.5"
+              onClick={showCalculator}
             />
             <label className="choices" htmlFor="apsc">
             APS-C :          
@@ -90,6 +92,7 @@ roundedOutput = round(output, 1);
               name="formats"
               className="choices"
               cropfactor="2.7"
+              onClick={showCalculator}
             />
             <label className="choices" htmlFor="oneinch">
             1 inch : 
@@ -99,7 +102,7 @@ roundedOutput = round(output, 1);
           </li>
         </ul>
 
-        <div className="labels">
+        <div id="calculator" className="labels hide">
           <label htmlFor="fname" className="your-lens-label ">
             2. Enter your Lens mm.
           </label>
@@ -120,7 +123,7 @@ roundedOutput = round(output, 1);
           />
         </div>
         <br />
-        <div className="submit-container">
+        <div id="submit-button" className="submit-container hide">
           <input
             type="submit"
             className="submit-btn"

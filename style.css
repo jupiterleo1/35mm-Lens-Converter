@@ -60,7 +60,7 @@ input {
 }
 
 .labels {
-  display: flex;
+  display: flex ;
   flex-direction: column;
   border-top: 0.2rem ridge whitesmoke;
   border-bottom: 0.2rem ridge whitesmoke;
@@ -70,6 +70,8 @@ input {
   justify-content: center;
   align-content: center;
 }
+
+
 
 .formats {
   display: flex;
@@ -174,7 +176,11 @@ input {
 .btn-up-color{
   background-color: lime;
 }
+
 .btn-down-color{
   background-color:tomato;
-  
+}
+
+.hide{
+  display: none;
 }
