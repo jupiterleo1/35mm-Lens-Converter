@@ -46,7 +46,7 @@ function Form() {
               className="choices"
             />
             <label htmlFor="m43" className="choices">
-            Micro 4/3: 2X Crop
+            Micro 4/3 :
             <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Afour-thirds" target=" blank">Buy</a>
             </label>
           </li>
@@ -60,7 +60,7 @@ function Form() {
               cropfactor="1.5"
             />
             <label className="choices" htmlFor="apsc">
-            APS-C: 1.5x Crop
+            APS-C :          
             <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Aaps-c-lenses" target=" blank">Buy</a>
               
             </label>
@@ -75,7 +75,7 @@ function Form() {
               cropfactor="2.7"
             />
             <label className="choices" htmlFor="oneinch">
-            1 inch: 2.7x Crop 
+            1 inch : 
             <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3A1in" target=" blank">Buy</a>
               
             </label>
