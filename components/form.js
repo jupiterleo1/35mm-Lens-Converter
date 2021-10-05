@@ -37,10 +37,7 @@ function Form() {
       <form className="forms" action="#">
         <ul className="formats">
           <li>
-            <label htmlFor="m43" className="choices">
-            Micro 4/3: 2X Crop
-            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Afour-thirds" target=" blank">Buy</a>
-            </label>
+            
             <input
               type="radio"
               id="m43"
@@ -48,13 +45,13 @@ function Form() {
               cropfactor="2"
               className="choices"
             />
+            <label htmlFor="m43" className="choices">
+            Micro 4/3: 2X Crop
+            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Afour-thirds" target=" blank">Buy</a>
+            </label>
           </li>
           <li>
-            <label className="choices" htmlFor="apsc">
-            APS-C: 1.5x Crop
-            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Aaps-c-lenses" target=" blank">Buy</a>
-              
-            </label>
+            
             <input
               type="radio"
               id="apsc"
@@ -62,13 +59,14 @@ function Form() {
               className="choices"
               cropfactor="1.5"
             />
-          </li>
-          <li>
-            <label className="choices" htmlFor="oneinch">
-            1 inch: 2.7x Crop 
-            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3A1in" target=" blank">Buy</a>
+            <label className="choices" htmlFor="apsc">
+            APS-C: 1.5x Crop
+            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Aaps-c-lenses" target=" blank">Buy</a>
               
             </label>
+          </li>
+          <li>
+            
             <input
               type="radio"
               id="oneinch"
@@ -76,6 +74,11 @@ function Form() {
               className="choices"
               cropfactor="2.7"
             />
+            <label className="choices" htmlFor="oneinch">
+            1 inch: 2.7x Crop 
+            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3A1in" target=" blank">Buy</a>
+              
+            </label>
           </li>
         </ul>
 
