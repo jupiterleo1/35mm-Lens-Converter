@@ -47,7 +47,7 @@ function Form() {
             />
             <label htmlFor="m43" className="choices">
             Micro 4/3 :
-            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Afour-thirds" target=" blank">Buy</a>
+            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Afour-thirds" target=" blank">Lenses</a>
             </label>
           </li>
           <li>
@@ -61,7 +61,7 @@ function Form() {
             />
             <label className="choices" htmlFor="apsc">
             APS-C :          
-            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Aaps-c-lenses" target=" blank">Buy</a>
+            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3Aaps-c-lenses" target=" blank">Lenses</a>
               
             </label>
           </li>
@@ -76,7 +76,7 @@ function Form() {
             />
             <label className="choices" htmlFor="oneinch">
             1 inch : 
-            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3A1in" target=" blank">Buy</a>
+            <a className="links" href="https://www.bhphotovideo.com/c/products/Mirrorless-Camera-Lenses/ci/17912/N/4196380428?filters=fct_lens-format-coverage_3332%3A1in" target=" blank">Lenses</a>
               
             </label>
           </li>
